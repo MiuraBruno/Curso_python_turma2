@@ -1,0 +1,7 @@
+3
+aluno1
+7 6 9 
+aluno2
+5 5 5
+aluno3
+0 0 2

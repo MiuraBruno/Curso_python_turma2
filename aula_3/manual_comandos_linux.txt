@@ -1,0 +1,24 @@
+#os exemplos descritos abaixo existem no diretório em questão
+#comandos para se usar no shell script
+
+atribuir um resultado de comando a um arquivo (criar ou recriar o arquivo)
+
+echo "olá tudo bem?" > arquivo.txt
+
+atribuir um resultado de comando a um arquivo (appendar ou recriar o arquivo)
+
+echo "olá tudo bem?" >> arquivo.txt
+
+
+os simbolos >, >>, <, << redirecionam a saida ou o arquivo em questão em uma linha de comando
+
+
+#executar um código python e gravar sua saída em um arq.txt
+py hello.py > arq.txt
+
+#executar um programa usando como input um arquivo
+py print_nomes_numeros.py < nomes_numeros.txt 
+obs.: o resultado desse código pode ser visto na imagem resultado_1.png
+
+#executar um programa usando como input um arquivo e colocar sua saída em outro arquivo
+py print_nomes_numeros.py < nomes_numeros.txt > saida_nomes_numeros.txt
