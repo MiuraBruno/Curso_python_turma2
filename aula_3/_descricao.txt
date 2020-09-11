@@ -1,0 +1,1 @@
+Aula relacionada a uso de dicionários e tuplas, assim como um mini tutorial de como rodar um programa python via linha de comando em um ambiente linux
