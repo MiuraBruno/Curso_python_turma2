@@ -1,0 +1,2 @@
+Aula relacionada a leitura de arquivos
+usando o método padrão do python 'open' e usando um try except
