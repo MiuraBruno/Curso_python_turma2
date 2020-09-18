@@ -1,10 +1,11 @@
 from time import time, sleep
 from funcoes.aux_func_matriz import media_matriz
+from datetime import date
 
 start = time()
 especies = {}
 indice = 0
-
+today = date.today()
 
 def main(start,especies,indice):
     while True:
@@ -24,13 +25,13 @@ def main(start,especies,indice):
             nomes_arquivos = especies.keys()
             cabecalho_final = cabecalho[1:-1] 
             cabecalho_final = "|".join(cabecalho_final)
-            arq_geral = open('geral.csv','a+')
+            arq_geral = open('saida/geral_2.csv','a+')
             arq_geral.write(cabecalho_final + '|' + 'ESPECIES' + '\n' )
             geral = []
 
             for i in nomes_arquivos:
                 resultado = media_matriz(especies[i])[1:]
-                file = open(i + '.csv' ,'a+')
+                file = open('saida/' + i + '_2.csv' ,'a+')
                 file.write(cabecalho_final + '\n')
                 file.write("|".join(list(map(lambda x: str(x),resultado))))
                 arq_geral.write("|".join(list(map(lambda x: str(x),resultado))) + '|' + i + '\n')
@@ -38,6 +39,7 @@ def main(start,especies,indice):
                 
             arq_geral.close()
             sleep(3)
+            print("O job foi rodado na data:", today)
             print('Arquivo gerado com sucesso com tempo de execução de %.2f segundos' %(time()-start))
             break
             
