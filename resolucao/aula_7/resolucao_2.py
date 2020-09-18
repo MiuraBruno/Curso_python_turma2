@@ -1,5 +1,5 @@
 from time import time, sleep
-from aux_func_matriz import media_matriz
+from funcoes.aux_func_matriz import media_matriz
 
 start = time()
 especies = {}
